@@ -1,0 +1,65 @@
+.logo-social {
+    font-size: 0.8em;
+    margin-right: 10px;
+    background: rgba(7, 71, 128, 1);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  
+  .app-box {
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .app-logo {
+    height: 35px !important;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: #074780;
+    color: white;
+  }
+  
+  .swiper-button-prev {
+    left: 0px;
+  }
+  
+  .swiper-button-next {
+    right: 0px;
+  }
+  
+  .swiper-button-prev::after {
+    font-size: 28px;
+  }
+  
+  .swiper-button-next::after {
+    font-size: 28px;
+  }
+  
+  .titles{
+    color: #074780;
+  }
+  
+  .dp-banner{
+    height: 22rem;
+  }
+
+  /*Carousels*/
+  .main-carousel{
+    height: 400px;
+}
+
+.latest-carousel{
+    height: 255px;
+    padding-top: 50px;
+}
+
+
+ 
+  /*Carousels*/

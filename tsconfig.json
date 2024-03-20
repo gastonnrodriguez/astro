@@ -3,9 +3,13 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
-    "baseUrl": ".",
+    "baseUrl": "D:/personal/dev/astro/astro",
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

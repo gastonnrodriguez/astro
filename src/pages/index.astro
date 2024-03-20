@@ -11,16 +11,55 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+//Dialogo Politico Componentes
+import { wpquery } from '../graphql/wpQuery';
+
+import HeroCarousel from '../components/dp/HeroCarousel';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+
+const last5AgendaPosts = await wpquery({
+  query: `
+  {
+	posts(first: 5){
+    nodes {
+      id
+      slug
+      excerpt
+      title
+      date
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      categories {
+        nodes {
+          name
+        }
+      }
+      author{
+         node {
+          name
+        }
+      }
+    }
+  }
+}
+  `,
+});
+
+  console.log('la data ', last5AgendaPosts);
+
+
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
+  <HeroCarousel client:load data={last5AgendaPosts.posts.nodes}/>
   <Hero
     actions={[
       {
