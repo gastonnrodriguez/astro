@@ -1,0 +1,24 @@
+---
+import '../../assets/styles/custom.css';
+import dpbanner from '../../assets/images/dpbanner.svg';
+---
+
+<div class="relative h-64 ">
+  <img src={dpbanner.src} />
+  <div class="flex items-center justify-center">
+    <div class="absolute inset-0 flex items-center justify-start">
+      <div class="px-64">
+        <p class="bg-gray-700 text-white mb-4">EDICIÓN ESPECIAL 2024</p>
+        <h2 class="text-2xl font-bold mb-2 text-white">Claves para entender a China</h2>
+        <button class="bg-orange-400 text-white font-bold py-2 px-4 rounded mr-2">Visitar</button>
+        <button class="bg-orange-400 text-white font-bold py-2 px-4 rounded">English version</button>
+      </div>
+    </div>
+
+    <img
+      class="absolute top-1/2 right-8 transform -translate-y-1/2 w-44"
+      src="https://dialogopolitico.org/wp-content/uploads/2024/01/Portada-en-espanol-scaled.webp"
+      alt="Imagen pequeña"
+    />
+  </div>
+</div>

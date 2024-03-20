@@ -10,9 +10,9 @@ import {encodedCredentials} from './utils';
  
  
  export async function wpquery({query, variables={}}:gqlParams) {
-console.log('query ', query);
+
 const credentials = encodedCredentials(process.env.APP_USER,process.env.APP_PASSWORD);
-console.log(credentials);
+
 const response = await fetch('https://dialogopolitico.org/graphql',{
         method: 'post',
         headers: {
